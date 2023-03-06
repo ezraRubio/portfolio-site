@@ -11,9 +11,13 @@ function LinkedRoute({
 }) {
   const href = getHref(route);
   const text = getText(route);
+  const linkStyle = "text-xl text-semibold";
+
   return (
     <li>
-      <Link href={href}> {text} </Link>
+      <Link href={href} className={linkStyle}>
+        {text}
+      </Link>
     </li>
   );
 }
