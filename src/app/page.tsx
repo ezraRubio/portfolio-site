@@ -1,7 +1,10 @@
-"use client"
-import { hello, introduction } from "@/models/constants";
+/* eslint-disable react/no-unescaped-entities */
+"use client";
+import { hello } from "@/models/constants";
 import React, { useState, useEffect } from "react";
 import { motion, useTransform, useScroll, clamp } from "framer-motion";
+import Typical from "react-typical";
+import Technologies from "@/components/Technologies";
 
 const Home: React.FC = () => {
   const [height, setHeight] = useState(0);
@@ -26,16 +29,24 @@ const Home: React.FC = () => {
         }}
       />
       <motion.div
-        className="relative h-screen flex items-center justify-center"
+        className="relative h-screen flex flex-col items-center justify-center"
         style={{ zIndex: 1, translateY: clampedY1 }}
       >
-        <h1 className="text-6xl font-bold text-white">{hello}</h1>
+        <div className="text-6xl font-bold text-white mb-6">{hello}</div>
+        <div className="text-4xl font-semibold text-white">
+          I'm a{" "}
+          <Typical
+            wrapper="span"
+            steps={["Front End", 2000, "Back End", 2000, "Full Stack", 6000]}
+          />{" "}
+          Software Developer
+        </div>
       </motion.div>
       <motion.div
         className="relative h-screen flex items-center justify-center"
         style={{ zIndex: 1, translateY: clampedY1 }}
       >
-        <h1 className="text-4xl font-semibold text-white">{introduction}</h1>
+        <Technologies />
       </motion.div>
     </div>
   );
