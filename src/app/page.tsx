@@ -4,7 +4,13 @@ import { hello } from "@/models/constants";
 import React, { useState, useEffect } from "react";
 import { motion, useTransform, useScroll, clamp } from "framer-motion";
 import Typical from "react-typical";
-import Technologies from "@/components/Technologies";
+import dynamic from "next/dynamic";
+const Technologies = dynamic(
+  () => {
+    return import("@/components/Technologies");
+  },
+  { ssr: false }
+);
 
 const Home: React.FC = () => {
   const [height, setHeight] = useState(0);
