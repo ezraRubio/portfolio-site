@@ -39,7 +39,7 @@ const Home: React.FC = () => {
         style={{ zIndex: 1, translateY: clampedY1 }}
       >
         <div className="text-6xl font-bold text-white mb-6">{hello}</div>
-        <div className="text-4xl font-semibold text-white">
+        <div className="text-4xl font-semibold text-white text-center">
           I'm a{" "}
           <Typical
             wrapper="span"
