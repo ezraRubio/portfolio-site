@@ -8,13 +8,13 @@ function Contact() {
       <div className="flex flex-row space-x-4">
         <a
           href="https://www.linkedin.com/in/ezrarubio/"
-          className="bg-blue-500 hover:bg-blue-700 text-white text-center font-semibold py-2 px-4 rounded w-1/6"
+          className="bg-blue-500 hover:bg-blue-700 w-2/5 md:w-1/6 text-white text-center font-semibold py-2 px-4 rounded"
         >
           Linked In
         </a>
         <a
           href="https://github.com/ezraRubio"
-          className="bg-blue-500 hover:bg-blue-700 text-white text-center font-semibold py-2 px-4 rounded w-1/6"
+          className="bg-blue-500 hover:bg-blue-700 w-2/5 md:w-1/6 text-white text-center font-semibold py-2 px-4 rounded"
         >
           {" "}
           GitHub

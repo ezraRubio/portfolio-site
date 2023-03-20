@@ -10,7 +10,7 @@ function Projects() {
         <a
           href="https://pet-agency.vercel.app/"
           target="_blank"
-          className="bg-blue-500 hover:bg-blue-700 text-white text-center font-semibold py-2 px-4 rounded w-1/6"
+          className="bg-blue-500 hover:bg-blue-700 w-2/5 md:w-1/6 text-white text-center font-semibold py-2 px-4 rounded"
         >
           Click Here
         </a>
