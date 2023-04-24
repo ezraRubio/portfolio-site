@@ -15,8 +15,13 @@ function Projects() {
           Click Here
         </a>
         <p>
-          * currently undergoing extensive refactoring, but search functionality
-          is available *
+          <a
+            href="https://github.com/ezraRubio/pet-agency-BE"
+            className="bg-blue-500 hover:bg-blue-700 w-2/5 md:w-1/6 text-white text-center font-semibold py-2 px-4 rounded"
+            target="_blank"
+          >
+            Check out the back end code here
+          </a>
         </p>
       </div>
     </div>
