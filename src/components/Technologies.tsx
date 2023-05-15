@@ -14,6 +14,7 @@ import {
   SiExpress,
   SiJavascript,
   SiFigma,
+  SiSwift,
 } from "react-icons/si";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { TbBrandFramerMotion, TbBrandReactNative } from "react-icons/tb";
@@ -34,6 +35,7 @@ const technologies = [
   { icon: FaGitAlt, name: "Git" },
   { icon: FaPython, name: "Python" },
   { icon: SiFigma, name: "Figma" },
+  { icon: SiSwift, name: "Swift"}
 ];
 const duplicate = [
   ...technologies,
