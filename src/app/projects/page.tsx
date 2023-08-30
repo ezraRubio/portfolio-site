@@ -23,6 +23,16 @@ function Projects() {
             Check out the back end code here
           </a>
         </p>
+        <h1 className="text-bold text-black text-3xl">Music Library Extraction App for MacOS - SwiftUI</h1>
+        <p>
+          <a
+            href="https://github.com/ezraRubio/music-library-extractor"
+            target="_blank"
+            className="bg-blue-500 hover:bg-blue-700 w-2/5 md:w-1/6 text-white text-center font-semibold py-2 px-4 rounded"
+          >
+            Check out the code here
+          </a>
+        </p>
         <h1 className="text-bold text-black text-3xl">To-Do List App - iOS native example - SwiftUI: </h1>
         <p>
           <a
