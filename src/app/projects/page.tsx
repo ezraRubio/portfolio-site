@@ -1,3 +1,5 @@
+import YoutubeEmbed from "@/components/YouTubeEmbed";
+
 function Projects() {
   return (
     <div className="ml-8">
@@ -20,6 +22,7 @@ function Projects() {
           </a>
         </p>
         <h1 className="text-bold text-black text-3xl">Music Library Extraction App for MacOS - SwiftUI</h1>
+        <YoutubeEmbed id="kfiIeqocJTk"/>
         <p>
           <a
             href="https://github.com/ezraRubio/music-library-extractor"
