@@ -1,5 +1,11 @@
-export enum routes {
-    HOME = "Home",
-    PROJECTS = "Projects",
-    CONTACT = "Contact",
+export enum Routes {
+  HOME = "Home",
+  PROJECTS = "Projects",
+  CONTACT = "Contact",
+}
+
+export enum ButtonOptions {
+  CLICK = "Click Here to open",
+  CODE = "Check out the code",
+  DOWNLOAD = "Download",
 }
