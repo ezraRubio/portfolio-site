@@ -1,6 +1,6 @@
 "use client";
-import { title } from "@/models/constants";
-import { routes } from "@/models/enums";
+import { TITLE } from "@/models/constants";
+import { Routes } from "@/models/enums";
 import { useState } from "react";
 import LinkedRoute from "./LinkedRoute";
 
@@ -18,10 +18,10 @@ function Navigator() {
     <div className="bg-gray-100">
       <header className={navStyle}>
         <div className={divStyle}>
-          <span className={titleStyle}>{title}</span>
+          <span className={titleStyle}>{TITLE}</span>
           <div className="flex items-center space-x-1">
             <ul className="hidden space-x-2 md:inline-flex">
-              {(Object.values(routes) as string[])?.map((route) => (
+              {(Object.values(Routes) as string[])?.map((route) => (
                 <LinkedRoute route={route} key={route} hook={setIsOpen} />
               ))}
             </ul>
@@ -47,7 +47,7 @@ function Navigator() {
                 <span className="sr-only">Open Menu</span>
               </button>
               <ul className={burgerMenuStyle}>
-                {(Object.values(routes) as string[])?.map((route) => (
+                {(Object.values(Routes) as string[])?.map((route) => (
                   <LinkedRoute route={route} key={route} hook={setIsOpen} />
                 ))}
               </ul>

@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
-import { hello } from "@/models/constants";
+import { HELLO } from "@/models/constants";
 import React, { useState, useEffect } from "react";
 import { motion, useTransform, useScroll, clamp } from "framer-motion";
 import Typical from "react-typical";
@@ -38,7 +38,7 @@ const Home: React.FC = () => {
         className="relative h-screen flex flex-col items-center justify-center"
         style={{ zIndex: 1, translateY: clampedY1 }}
       >
-        <div className="text-6xl font-bold text-white mb-6">{hello}</div>
+        <div className="text-6xl font-bold text-white mb-6">{HELLO}</div>
         <div className="text-4xl font-semibold text-white text-center">
           I'm a{" "}
           <Typical
