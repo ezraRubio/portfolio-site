@@ -10,7 +10,7 @@ export const YOUTUBE = "https://www.youtube.com/embed/";
 
 export const PROJECTS: Project[] = [
   {
-    title: "Music Library Extraction App",
+    title: "Music Library Extraction",
     repo: "music-library-extractor",
     description:
       "Native app for MacOS that allows the user to extract the data from their Apple Music library",
@@ -25,7 +25,7 @@ export const PROJECTS: Project[] = [
     isHosted: true,
   },
   {
-    title: "To-Do List App",
+    title: "To-Do List",
     repo: "to-do_ios",
     description:
       "Native iOS app that has user login and holds a simple to do list",

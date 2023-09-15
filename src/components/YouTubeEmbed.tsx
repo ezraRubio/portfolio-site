@@ -1,10 +1,8 @@
 import { YOUTUBE } from "@/models/constants";
 
 const YoutubeEmbed = ({ id }: {id: string}) => (
-  <div className="">
+  <div className="aspect-w-16 aspect-h-9">
     <iframe
-      width="480"
-      height="320"
       src={`${YOUTUBE}${id}`}
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
