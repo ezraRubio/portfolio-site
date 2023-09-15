@@ -10,20 +10,25 @@ interface ProjectProps {
 
 const Project: React.FC<ProjectProps> = ({ project }) => {
   return (
-    <>
-      <h1 className="text-bold text-black text-3xl">{project.title}</h1>
+    <div className="flex flex-col items-center border rounded-md shadow-lg p-4 space-y-4">
+      <h1 className="text-bold text-black text-3xl text-center">{project.title}</h1>
       {project.youtubeId && <YoutubeEmbed id={project.youtubeId ?? ""} />}
-      <p>{project.description}</p>
-      {project.isHosted ? (
-        <Button
-          title={ButtonOptions.CLICK}
-          link={project.downloadOrOpen ?? ""}
-        />
-      ) : project.downloadOrOpen ? (
-        <Button title={ButtonOptions.DOWNLOAD} link={project.downloadOrOpen} />
-      ) : null}
-      <Button title={ButtonOptions.CODE} link={project.repo} />
-    </>
+      <p className="text-center">{project.description}</p>
+      <div className="flex flex-row justify-items-center space-x-1 sm:space-x-4">
+        {project.isHosted ? (
+          <Button
+            title={ButtonOptions.CLICK}
+            link={project.downloadOrOpen ?? ""}
+          />
+        ) : project.downloadOrOpen ? (
+          <Button
+            title={ButtonOptions.DOWNLOAD}
+            link={project.downloadOrOpen}
+          />
+        ) : null}
+        <Button title={ButtonOptions.CODE} link={project.repo} />
+      </div>
+    </div>
   );
 };
 
