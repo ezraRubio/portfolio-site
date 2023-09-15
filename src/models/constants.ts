@@ -13,7 +13,7 @@ export const PROJECTS: Project[] = [
     title: "Music Library Extraction",
     repo: "music-library-extractor",
     description:
-      "Native app for MacOS that allows the user to extract the data from their Apple Music library",
+      "Native app for MacOS that allows the user to extract the data from their Apple Music library.",
     youtubeId: "kfiIeqocJTk",
     isHosted: false,
   },
