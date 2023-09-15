@@ -3,6 +3,7 @@ import YoutubeEmbed from "./YouTubeEmbed";
 import Button from "./Button";
 import { ButtonOptions } from "@/models/enums";
 import { Project } from "@/models/types";
+import { GITHUB } from "@/models/constants";
 
 interface ProjectProps {
   project: Project;
@@ -28,7 +29,7 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
             link={project.downloadOrOpen}
           />
         ) : null}
-        <Button title={ButtonOptions.CODE} link={project.repo} />
+        <Button title={ButtonOptions.CODE} link={`${GITHUB}${project.repo}`} />
       </div>
     </div>
   );
