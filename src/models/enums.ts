@@ -8,4 +8,6 @@ export enum ButtonOptions {
   CLICK = "Click Here to open",
   CODE = "Check out the code",
   DOWNLOAD = "Download",
+  LINKEDIN = "LinkedIn",
+  GITHUB = "GitHub",
 }

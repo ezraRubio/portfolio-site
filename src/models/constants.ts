@@ -8,6 +8,8 @@ export const GITHUB = "https://github.com/ezraRubio/";
 
 export const YOUTUBE = "https://www.youtube.com/embed/";
 
+export const LINKEDIN = "https://www.linkedin.com/in/ezrarubio/";
+
 export const PROJECTS: Project[] = [
   {
     title: "Music Library Extraction",
