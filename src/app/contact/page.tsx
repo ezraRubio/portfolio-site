@@ -1,24 +1,19 @@
+import Button from "@/components/Button";
+import { GITHUB, LINKEDIN } from "@/models/constants";
+import { ButtonOptions } from "@/models/enums";
+
 function Contact() {
   return (
-    <div className="ml-8">
-      <h2 className="mt-28">coming soon</h2>
-      <h3> Ezra Rubio </h3>
-      <h3> ezra@ezrarubio.com</h3>
-      <h3> 0585504711 </h3>
+    <div className="ml-10 mt-20">
+      <h2 className="font-semibold"> Ezra Rubio </h2>
+      <p className="m-6">
+        For inquiries:
+        <p className="font-medium"> ezra@ezrarubio.com</p>
+        <p className="font-medium"> 0585504711 </p>
+      </p>
       <div className="flex flex-row space-x-4">
-        <a
-          href="https://www.linkedin.com/in/ezrarubio/"
-          className="bg-blue-500 hover:bg-blue-700 w-2/5 md:w-1/6 text-white text-center font-semibold py-2 px-4 rounded"
-        >
-          Linked In
-        </a>
-        <a
-          href="https://github.com/ezraRubio"
-          className="bg-blue-500 hover:bg-blue-700 w-2/5 md:w-1/6 text-white text-center font-semibold py-2 px-4 rounded"
-        >
-          {" "}
-          GitHub
-        </a>
+        <Button link={LINKEDIN} title={ButtonOptions.LINKEDIN} />
+        <Button link={GITHUB} title={ButtonOptions.GITHUB} />
       </div>
     </div>
   );
