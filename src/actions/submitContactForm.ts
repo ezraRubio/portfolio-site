@@ -1,4 +1,5 @@
 "use server";
+import { redirect } from "next/navigation";
 import nodemailer from "nodemailer";
 import Mail from 'nodemailer/lib/mailer';
 
@@ -44,6 +45,8 @@ const submitContactForm = async (data: FormData) => {
   } catch (error) {
     console.log("error sending email", error)
   }
+  
+  redirect("/")
 };
 
 export default submitContactForm;
