@@ -1,6 +1,6 @@
 import React from "react";
-import { ButtonOptions } from "@/models/enums";
 import submitContactForm from "@/actions/submitContactForm";
+import SubmitFormButton from "./SubmitFormButton";
 
 const ContactForm = () => {
   return (
@@ -12,6 +12,7 @@ const ContactForm = () => {
       <label className="ml-4" id="name">
         Name:
         <input
+          required
           id="name"
           name="name"
           type="text"
@@ -21,6 +22,7 @@ const ContactForm = () => {
       <label className="ml-4" id="mail">
         Mail:
         <input
+          required
           id="mail"
           name="mail"
           type="text"
@@ -31,17 +33,13 @@ const ContactForm = () => {
         Message:
       </label>
       <textarea
+        required
         id="message"
         rows={5}
         name="message"
         className="mx-4 border border-solid rounded"
       />
-      <button
-        type="submit"
-        className="bg-blue-500 hover:bg-blue-700 text-white text-center text-xs sm:text-base font-semibold py-2 px-4 rounded"
-      >
-        {ButtonOptions.SEND}
-      </button>
+      <SubmitFormButton />
     </form>
   );
 };
