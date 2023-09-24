@@ -10,4 +10,6 @@ export enum ButtonOptions {
   DOWNLOAD = "Download",
   LINKEDIN = "LinkedIn",
   GITHUB = "GitHub",
+  SEND = "Send",
+  SENDING = "Sending...",
 }
