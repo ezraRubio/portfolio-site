@@ -45,7 +45,7 @@ const submitContactForm = async (data: FormData) => {
   } catch (error) {
     console.log("error sending email", error)
   }
-
+  
   redirect("/")
 };
 
