@@ -4,6 +4,7 @@ import Button from "./Button";
 import { ButtonOptions } from "@/models/enums";
 import { Project } from "@/models/types";
 import { GITHUB } from "@/models/constants";
+import ProjectImageDisplay from "./ProjectImageDisplay";
 
 interface ProjectProps {
   project: Project;
@@ -16,6 +17,7 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
         {project.title}
       </h1>
       {project.youtubeId && <YoutubeEmbed id={project.youtubeId ?? ""} />}
+      {project.images?.length !== 0 && <ProjectImageDisplay images={project.images ?? []}/>}
       <p className="text-center">{project.description}</p>
       <div className="flex flex-row justify-items-center space-x-1 sm:space-x-4">
         {project.isHosted ? (

@@ -1,4 +1,6 @@
 import { Project } from "./types";
+import PetAgencyImage1 from "../assets/pet-agency1.png";
+import PetAgencyImage2 from "../assets/pet-agency2.png";
 
 export const TITLE = "Ezra Rubio : Developer";
 
@@ -25,6 +27,7 @@ export const PROJECTS: Project[] = [
     description: "Web app that simulates a pet adoption agency.",
     downloadOrOpen: "https://pet-agency.vercel.app/",
     isHosted: true,
+    images: [PetAgencyImage1, PetAgencyImage2],
   },
   {
     title: "To-Do List",
