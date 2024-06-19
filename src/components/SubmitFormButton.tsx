@@ -1,6 +1,6 @@
 "use client";
 import { ButtonOptions } from "@/models/enums";
-import { experimental_useFormStatus as useFormStatus } from "react-dom";
+import { useFormStatus } from "react-dom";
 
 const SubmitFormButton = () => {
   const { pending } = useFormStatus();
