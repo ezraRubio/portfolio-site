@@ -1,5 +1,6 @@
 import React from "react";
 import Navigator from "@/components/NavBar/Navigator";
+import { Analytics } from "@vercel/analytics/react"
 import "./globals.css";
 
 export default function RootLayout({
@@ -17,6 +18,7 @@ export default function RootLayout({
       <body>
         <Navigator />
         {children}
+        <Analytics />
       </body>
     </html>
   );
