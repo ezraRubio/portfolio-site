@@ -2,12 +2,12 @@ import React from "react";
 import YoutubeEmbed from "./YouTubeEmbed";
 import Button from "./Button";
 import { ButtonOptions } from "@/models/enums";
-import { Project } from "@/models/types";
+import { Project as ProjectType } from "@/models/types";
 import { GITHUB } from "@/models/constants";
 import ProjectImageDisplay from "./ProjectImageDisplay";
 
 interface ProjectProps {
-  project: Project;
+  project: ProjectType;
 }
 
 const Project: React.FC<ProjectProps> = ({ project }) => {

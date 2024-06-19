@@ -3,8 +3,8 @@
 import { HELLO } from "@/models/constants";
 import React, { useState, useEffect } from "react";
 import { motion, useTransform, useScroll, clamp } from "framer-motion";
-import Typical from "react-typical";
 import dynamic from "next/dynamic";
+import Typical from "@/components/Typical/Typical";
 const Technologies = dynamic(
   () => {
     return import("@/components/Technologies");
@@ -42,8 +42,9 @@ const Home: React.FC = () => {
         <div className="text-4xl font-semibold text-white text-center">
           I'm a{" "}
           <Typical
-            wrapper="span"
             steps={["Front End", 2000, "Back End", 2000, "Full Stack", 6000]}
+            loop={undefined}
+            className=""
           />{" "}
           Software Developer
         </div>
