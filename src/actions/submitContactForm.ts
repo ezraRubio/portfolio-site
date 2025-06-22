@@ -40,7 +40,8 @@ const submitContactForm = async (data: FormData) => {
   };
 
   try {
-    await transporter.sendMail(mailOptions)
+    console.log(`message from ${mail}: ${message}`)
+    // await transporter.sendMail(mailOptions)
 
   } catch (error) {
     console.log("error sending email", error)
