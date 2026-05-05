@@ -1,0 +1,10 @@
+# Root domain - serve static files
+ezrarubio.com {
+    root * /var/www/portfolio-site/dist
+    file_server
+}
+
+# Subdomain - reverse proxy to Docker app
+secrets.ezrarubio.com {
+    reverse_proxy localhost:3000
+}
