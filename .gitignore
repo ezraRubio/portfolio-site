@@ -34,3 +34,7 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+#rust
+refactor/dist/
+refactor/target/
