@@ -1,6 +1,6 @@
 # Root domain - serve static files
 ezrarubio.com {
-    root * /var/www/portfolio-site/dist
+    root * /var/www/portfolio-site/refactor/dist
     file_server
 }
 

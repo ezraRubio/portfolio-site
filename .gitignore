@@ -36,5 +36,4 @@ yarn-error.log*
 .vercel
 
 #rust
-refactor/dist/
 refactor/target/
