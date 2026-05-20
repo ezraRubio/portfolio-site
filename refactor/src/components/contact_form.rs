@@ -30,20 +30,22 @@ pub fn ContactForm() -> impl IntoView {
 
     view! {
         <form
-            class="mt-20 flex flex-col space-y-2 max-w-xs"
+            class="flex flex-col space-y-6 bg-everforest-bg1 border border-everforest-bg3 rounded-lg p-8 shadow-md"
             on:submit=on_submit
         >
-            <legend class="text-center">Contact Form</legend>
-            <label class="ml-4" id="name">
-                "Name:"
-                <input required=true id="name" name="name" type="text" class="ml-4 border border-solid rounded" />
+            <legend class="text-center text-everforest-fg text-xl font-semibold mb-4">Contact Form</legend>
+            <label class="flex flex-col space-y-2">
+                <span class="text-everforest-grey2 text-sm font-medium">Name:</span>
+                <input required=true id="name" name="name" type="text" class="w-full px-4 py-2.5 bg-everforest-bg2 border border-everforest-bg4 rounded-md text-everforest-fg placeholder-everforest-grey0 focus:outline-none focus:ring-2 focus:ring-everforest-green/50 focus:border-everforest-green transition-all duration-200 ease-smooth" placeholder="Your name" />
             </label>
-            <label class="ml-4" id="mail">
-                "Mail:"
-                <input required=true id="mail" name="mail" type="text" class="ml-4 border border-solid rounded" />
+            <label class="flex flex-col space-y-2">
+                <span class="text-everforest-grey2 text-sm font-medium">Email:</span>
+                <input required=true id="mail" name="mail" type="email" class="w-full px-4 py-2.5 bg-everforest-bg2 border border-everforest-bg4 rounded-md text-everforest-fg placeholder-everforest-grey0 focus:outline-none focus:ring-2 focus:ring-everforest-green/50 focus:border-everforest-green transition-all duration-200 ease-smooth" placeholder="your@email.com" />
             </label>
-            <label class="ml-4" id="message">"Message:"</label>
-            <textarea required=true id="message" rows=5 name="message" class="mx-4 border border-solid rounded"></textarea>
+            <label class="flex flex-col space-y-2">
+                <span class="text-everforest-grey2 text-sm font-medium">Message:</span>
+                <textarea required=true id="message" rows=5 name="message" class="w-full px-4 py-2.5 bg-everforest-bg2 border border-everforest-bg4 rounded-md text-everforest-fg placeholder-everforest-grey0 focus:outline-none focus:ring-2 focus:ring-everforest-green/50 focus:border-everforest-green transition-all duration-200 ease-smooth resize-none" placeholder="Your message..."></textarea>
+            </label>
             <SubmitFormButton is_pending=is_pending set_pending=set_pending />
         </form>
     }

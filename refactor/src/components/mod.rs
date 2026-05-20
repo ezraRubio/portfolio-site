@@ -7,3 +7,4 @@ pub mod project_image_display;
 pub mod technologies;
 pub mod youtube_embed;
 pub mod typical;
+pub mod footer;

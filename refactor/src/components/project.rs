@@ -46,12 +46,12 @@ pub fn Project(project: ProjectType) -> impl IntoView {
     };
 
     view! {
-        <div class="flex flex-col items-center border rounded-md shadow-lg p-4 space-y-4 w-[350px] md:w-[450px] min-h-full mx-6 mt-6">
-            <h1 class="text-bold text-black text-3xl text-center">{title}</h1>
+        <div class="flex flex-col items-center bg-everforest-bg1 border border-everforest-bg3 rounded-lg shadow-md hover:shadow-xl hover:shadow-everforest-green/10 p-6 space-y-5 w-[350px] md:w-[450px] min-h-full mx-4 mt-8 transition-all duration-300 ease-smooth hover:-translate-y-1 hover:border-everforest-green/30">
+            <h1 class="font-bold text-everforest-fg text-2xl text-center">{title}</h1>
             {youtube_view}
             {images_view}
-            <p class="text-center">{description}</p>
-            <div class="flex flex-row justify-items-center space-x-1 sm:space-x-4">
+            <p class="text-center text-everforest-grey2 text-sm leading-relaxed">{description}</p>
+            <div class="flex flex-row justify-items-center space-x-2 sm:space-x-3">
                 {link_view}
                 <Button title="Check out the code" link=github_link />
             </div>

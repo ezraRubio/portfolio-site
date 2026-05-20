@@ -7,6 +7,7 @@ use leptos_router::*;
 use leptos_meta::*;
 use wasm_bindgen::prelude::wasm_bindgen;
 use components::nav_bar::navigator::Navigator;
+use components::footer::Footer;
 
 #[component]
 pub fn App() -> impl IntoView {
@@ -23,6 +24,7 @@ pub fn App() -> impl IntoView {
                 <Route path="projects" view=app::projects::Projects />
                 <Route path="contact" view=app::contact::Contact />
             </Routes>
+            <Footer />
         </Router>
     }
 }
@@ -30,17 +32,11 @@ pub fn App() -> impl IntoView {
 #[wasm_bindgen(start)]
 pub fn main() {
     console_error_panic_hook::set_once();
-    web_sys::console::log_1(&"=== main started ===".into());
-
     console_log::init_with_level(log::Level::Debug).expect("couldn't initialize logging");
-    web_sys::console::log_1(&"logging initialized".into());
 
-    web_sys::console::log_1(&"calling mount_to_body".into());
     mount_to_body(|| {
-        web_sys::console::log_1(&"inside mount_to_body closure".into());
         view! {
             <App />
         }
     });
-    web_sys::console::log_1(&"mount_to_body returned".into());
 }

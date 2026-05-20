@@ -7,52 +7,50 @@ use crate::models::constants::TITLE;
 pub fn Navigator() -> impl IntoView {
     let (is_open, set_open) = create_signal(false);
 
-    let nav_style = "fixed top-0 z-30 w-full -mb-10 px-2 py-4 bg-white sm:px-4 sm:py shadow-xl";
-    let div_style = "flex items-center justify-between mx-auto max-w-7xl";
-    let title_style = "md:text-2xl text-lg font-extrabold text-blue-600";
+    let nav_style = "fixed top-0 z-30 w-full backdrop-blur-md bg-everforest-bg0/90 border-b border-everforest-bg3 transition-all duration-300 ease-smooth";
+    let div_style = "flex items-center justify-between mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-4";
+    let title_style = "md:text-2xl text-lg font-extrabold text-everforest-green tracking-tight";
 
     let burger_class = move || {
         if is_open.get() {
-            "absolute top-0 right-0 z-50 flex flex-col p-2 pb-4 m-2 space-y-3 bg-white rounded shadow"
+            "absolute top-full right-4 z-50 flex flex-col p-4 mt-2 space-y-2 bg-everforest-bg1 rounded-lg shadow-xl border border-everforest-bg3 animate-fade-in-up"
         } else {
-            "hidden top-0 right-0 z-50 flex flex-col p-2 pb-4 m-2 space-y-3 bg-white rounded shadow"
+            "hidden top-full right-4 z-50 flex flex-col p-4 mt-2 space-y-2 bg-everforest-bg1 rounded-lg shadow-xl border border-everforest-bg3"
         }
     };
 
     view! {
-        <div class="bg-gray-100">
-            <header class=nav_style>
-                <div class=div_style>
-                    <span class=title_style>{TITLE}</span>
-                    <div class="flex items-center space-x-1">
-                        <ul class="hidden space-x-2 md:inline-flex">
+        <header class=nav_style>
+            <div class=div_style>
+                <span class=title_style>{TITLE}</span>
+                <div class="flex items-center space-x-2">
+                    <ul class="hidden space-x-1 md:inline-flex">
+                        {all_routes().iter().map(|route| {
+                            view! {
+                                <LinkedRoute route=*route set_open=set_open />
+                            }
+                        }).collect::<Vec<_>>()}
+                    </ul>
+                    <div class="inline-flex md:hidden">
+                        <button
+                            class="flex-none px-2 py-2 rounded-md hover:bg-everforest-bg2 transition-colors duration-200 ease-smooth"
+                            on:click=move |_| set_open.update(|v| *v = !*v)
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-everforest-fg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+                            </svg>
+                            <span class="sr-only">Open Menu</span>
+                        </button>
+                        <ul class=burger_class>
                             {all_routes().iter().map(|route| {
                                 view! {
                                     <LinkedRoute route=*route set_open=set_open />
                                 }
                             }).collect::<Vec<_>>()}
                         </ul>
-                        <div class="inline-flex md:hidden">
-                            <button
-                                class="flex-none px-2"
-                                on:click=move |_| set_open.update(|v| *v = !*v)
-                            >
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
-                                </svg>
-                                <span class="sr-only">Open Menu</span>
-                            </button>
-                            <ul class=burger_class>
-                                {all_routes().iter().map(|route| {
-                                    view! {
-                                        <LinkedRoute route=*route set_open=set_open />
-                                    }
-                                }).collect::<Vec<_>>()}
-                            </ul>
-                        </div>
                     </div>
                 </div>
-            </header>
-        </div>
+            </div>
+        </header>
     }
 }
